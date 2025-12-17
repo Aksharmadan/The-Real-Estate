@@ -1,0 +1,59 @@
+.vtv-empty {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: #f3f4f6;
+  border-radius: 14px;
+}
+
+.vtv-empty h3 {
+  margin: 0 0 0.5rem;
+  color: #111827;
+}
+
+.vtv-empty p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.vtv {
+  width: 100%;
+}
+
+.vtv-roombar {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.vtv-room {
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: white;
+  cursor: pointer;
+  font-weight: 700;
+  color: #111827;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.vtv-room:hover {
+  transform: translateY(-1px);
+  border-color: #c7d2fe;
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.12);
+}
+
+.vtv-room.active {
+  background: #6366f1;
+  color: white;
+  border-color: #6366f1;
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.25);
+}
+
+.vtv-view {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0b1220;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+

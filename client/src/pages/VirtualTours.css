@@ -1,0 +1,378 @@
+.virtual-tours-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.virtual-tours-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.virtual-tours-header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.virtual-tours-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.virtual-tours-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+}
+
+.tours-list h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.virtual-tours-page .properties-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.virtual-tours-page .properties-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.virtual-tours-page .properties-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.virtual-tours-page .properties-grid::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.virtual-tours-page .properties-grid::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.virtual-tours-page .property-item {
+  cursor: pointer;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.virtual-tours-page .property-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border-color: #3498db;
+}
+
+.virtual-tours-page .property-item.active {
+  border-color: #3498db;
+  box-shadow: 0 5px 20px rgba(52, 152, 219, 0.3);
+}
+
+.virtual-tours-page .property-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.virtual-tours-page .property-info {
+  padding: 1rem;
+}
+
+.virtual-tours-page .property-info h3 {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.virtual-tours-page .property-location {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.virtual-tours-page .property-price {
+  color: #27ae60;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.virtual-tours-page .tour-count {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.tour-viewer-section {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tour-viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tour-viewer-header h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.virtual-tours-page .view-details-btn {
+  background: #3498db;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.virtual-tours-page .view-details-btn:hover {
+  background: #2980b9;
+}
+
+.virtual-tours-page .tour-viewer {
+  width: 100%;
+}
+
+.virtual-tours-page .room-selector {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.virtual-tours-page .room-selector button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.virtual-tours-page .room-selector button:hover {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.virtual-tours-page .room-selector button.active {
+  background: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+.virtual-tours-page .panorama-viewer {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.virtual-tours-page .tour-instructions {
+  background: #ecf0f1;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.virtual-tours-page .tour-instructions p {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.no-tours {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.no-tours h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.no-tours p {
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+.virtual-tours-page .cta-button {
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.virtual-tours-page .cta-button:hover {
+  background: #2980b9;
+}
+
+.virtual-tours-page .no-tour {
+  text-align: center;
+  padding: 3rem;
+  background: #ecf0f1;
+  border-radius: 12px;
+}
+
+.virtual-tours-page .no-tour h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.virtual-tours-page .no-tour p {
+  color: #7f8c8d;
+}
+
+.virtual-tours-page .tour-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background: #f5f5f5;
+  border-radius: 15px;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.virtual-tours-page .tour-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  background: #fff5f5;
+  border: 2px solid #fecaca;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.virtual-tours-page .tour-error h3 {
+  color: #dc2626;
+  margin-bottom: 1rem;
+}
+
+.virtual-tours-page .tour-error p {
+  color: #7f1d1d;
+  margin-bottom: 1.5rem;
+}
+
+.virtual-tours-page .loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.virtual-tours-page .loading {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+.virtual-tours-page .error-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.virtual-tours-page .error-container h2 {
+  color: #e74c3c;
+  margin-bottom: 0.5rem;
+}
+
+.virtual-tours-page .error-container p {
+  color: #7f8c8d;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.virtual-tours-page .retry-btn {
+  background: #3498db;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.virtual-tours-page .retry-btn:hover {
+  background: #2980b9;
+}
+
+@media (max-width: 1024px) {
+  .virtual-tours-content {
+    grid-template-columns: 1fr;
+  }
+
+  .virtual-tours-page .properties-grid {
+    max-height: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .tour-viewer-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .virtual-tours-page {
+    padding: 1rem;
+  }
+
+  .virtual-tours-header h1 {
+    font-size: 2rem;
+  }
+
+  .virtual-tours-page .room-selector {
+    justify-content: center;
+  }
+
+  .virtual-tours-page .panorama-viewer iframe {
+    height: 400px !important;
+  }
+}
