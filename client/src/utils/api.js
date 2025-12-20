@@ -2,9 +2,11 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5001/api',
-  timeout: 10000, // 10 seconds timeout
+  baseURL: 'https://the-real-estate.onrender.com/api',
+  timeout: 10000,
+  withCredentials: true,
 });
+
 
 // Request interceptor
 API.interceptors.request.use(
