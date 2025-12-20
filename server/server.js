@@ -66,6 +66,11 @@ const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
 });
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/properties', require('./routes/properties'));
+app.use('/api/users', require('./routes/users'));
+app.use('/api/reviews', require('./routes/reviews'));
+app.use('/api/inquiries', require('./routes/inquiries'));
 app.get('/api/seed-properties', async (req, res) => {
 
   const properties = [
@@ -98,5 +103,13 @@ app.get('/api/seed-properties', async (req, res) => {
   ];
 
   await Property.insertMany(properties);
-  res.json({ success: true, message: "Properties added" });
+  res.json({ success: true, message: 'Properties added successfully' });
+});
+
+// ❗ 404 HANDLER MUST BE LAST
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    error: `Route ${req.originalUrl} not found`,
+  });
 });
