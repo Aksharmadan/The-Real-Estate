@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const API = axios.create({
   baseURL: 'https://the-real-estate.onrender.com/api',
   timeout: 10000,
-  withCredentials: true,
+  
 });
 
 
