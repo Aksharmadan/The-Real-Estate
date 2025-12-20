@@ -66,3 +66,37 @@ const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
 });
+app.get('/api/seed-properties', async (req, res) => {
+
+  const properties = [
+    {
+      title: "Luxury Apartment in Mumbai",
+      description: "Spacious 3BHK apartment with sea view",
+      city: "Mumbai",
+      price: 25000000,
+      bedrooms: 3,
+      bathrooms: 2,
+      propertyType: "Apartment",
+      listingType: "Sale",
+      images: [
+        "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2",
+      ],
+    },
+    {
+      title: "Villa in Bangalore",
+      description: "Modern villa with garden and parking",
+      city: "Bangalore",
+      price: 18000000,
+      bedrooms: 4,
+      bathrooms: 3,
+      propertyType: "Villa",
+      listingType: "Sale",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      ],
+    },
+  ];
+
+  await Property.insertMany(properties);
+  res.json({ success: true, message: "Properties added" });
+});
